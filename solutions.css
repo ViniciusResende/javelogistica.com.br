@@ -5,7 +5,7 @@ input[name=solution] {
 #solutionTruck:checked ~ .solutions label[for=solutionTruck],
 #solutionTransfer:checked ~ .solutions label[for=solutionTransfer],
 #solutionCross:checked ~ .solutions label[for=solutionCross] {
-    box-shadow: inset 0.1vw 0.1vw 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0.1em 0.1em 1px rgba(0, 0, 0, 0.2);
     background-color: rgba(0, 0, 0, 0.14);
 }
 
@@ -16,14 +16,14 @@ input[name=solution] {
 .solution {
     background-color: rgba(0, 0, 0, 0.07);
     border: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 1vw;
-    box-shadow: 0.1vw 0.1vw 1px rgba(0, 0, 0, 0.1);
+    border-radius: 1em;
+    box-shadow: 0.1em 0.1em 1px rgba(0, 0, 0, 0.1);
     transition: background 0.3s ease;
     cursor: pointer;
     flex: 1;
-    margin: 0 1vw;
+    margin: 0 1em;
     overflow: hidden;
-    padding-top: 1vw;
+    padding-top: 1em;
 }
 
 .solution-icon {
@@ -32,39 +32,43 @@ input[name=solution] {
 
 .solution-icon i {
     color: white;
-    font-size: 5vw;
+    font-size: 5em;
     position: absolute;
     left: 50%;
     top: 50%;
-    text-shadow: 0.1vw 0.1vw 1px rgba(0, 0, 0, 0.4);
+    text-shadow: 0.02em 0.02em 1px rgba(0, 0, 0, 0.4);
     transform: translateX(-50%) translateY(-50%);
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.solution:hover .solution-icon i {
+    text-shadow: 0.02em 0.1em 0.1em rgba(0, 0, 0, 0.4);
 }
 
 .solution h2 {
     display: table;
-    font-size: 1.25vw;
-    line-height: 2.5vw;
+    font-size: 1.25em;
+    line-height: 2.5em;
     margin: 0 auto;
-    padding: 1vw 0;
+    padding: 1em 0;
     position: relative;
     text-align: center;
-    text-shadow: 0.1vw 0.1vw 1px rgba(0, 0, 0, 0.4);
+    text-shadow: 0.1em 0.1em 1px rgba(0, 0, 0, 0.4);
     text-transform: uppercase;
     transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
 
 .solution:hover h2 {
-    text-shadow: 0.1vw 0.5vw 0.5vw rgba(0, 0, 0, 0.4);
-    transform: translateY(-0.5vw);
+    text-shadow: 0.1em 0.5em 0.5em rgba(0, 0, 0, 0.4);
+    transform: translateY(-0.5em);
 }
 
 .solution h2:before {
     background-color: black;
-    box-shadow: 0.1vw 0.1vw 1px rgba(0, 0, 0, 0.4);
-    bottom: 1.2vw;
+    box-shadow: 0.1em 0.1em 1px rgba(0, 0, 0, 0.4);
+    bottom: 1.2em;
     content: '';
-    height: 0.2vw;
+    height: 0.2em;
     left: 0;
     position: absolute;
     width: 100%;
@@ -73,16 +77,16 @@ input[name=solution] {
 }
 
 .solution:hover h2:before {
-    box-shadow: 0.1vw 0.5vw 0.5vw rgba(0, 0, 0, 0.4);
+    box-shadow: 0.1em 0.5em 0.5em rgba(0, 0, 0, 0.4);
     transform: scale(1);
 }
 
 .solution-truck h2 {
-    line-height: 1.25vw;
+    line-height: 1.25em;
 }
 
 .solution-truck h2:before {
-    bottom: 0.6vw;
+    bottom: 0.6em;
 }
 
 @media screen and (max-width: 968px) {
@@ -116,11 +120,11 @@ input[name=solution] {
 
 .hexagon {
     position: relative;
-    width: 15vw;
-    height: 8.6605vw;
+    width: 15em;
+    height: 8.6605em;
     background-color: rgba(18, 56, 31, 0.5);
-    margin: 4.33vw auto;
-    filter: drop-shadow(0 0 0.2vw rgba(0, 0, 0, 0.4));
+    margin: 4.33em auto;
+    filter: drop-shadow(0 0 0.2em rgba(0, 0, 0, 0.4));
     transform: rotate(0deg);
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
@@ -136,10 +140,10 @@ input[name=solution] {
     position: absolute;
     width: 0;
     border-style: solid;
-    border-width: 4.33vw;
+    border-width: 4.33em;
     border-color: rgba(18, 56, 31, 0.5);
-    border-left: 7.5vw solid transparent;
-    border-right: 7.5vw solid transparent;
+    border-left: 7.5em solid transparent;
+    border-right: 7.5em solid transparent;
     transition: border-color 0.3s ease;
 }
 
@@ -163,8 +167,8 @@ input[name=solution] {
 }
 
 .solution-slider {
-    height: 16vw;
-    margin-top: 2vw;
+    height: 16em;
+    margin-top: 2em;
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -182,13 +186,13 @@ input[name=solution] {
     height: 100%;
     left: 0;
     width: 100%;
-    padding: 1vw;
+    padding: 1em;
     position: absolute;
     top: 0;
 }
 
 .solution-slider h3 {
-    font-size: 2vw;
+    font-size: 2em;
 }
 
 #solutionTruck:checked ~ .solution-slider .slides {

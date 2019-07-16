@@ -196,7 +196,6 @@ input[name=menu]:checked:not(#menuHome) ~ svg.logo {
 
 div.slogan {
     color: #12381F;
-    /*color: #00A650;*/
     font-size: 2vw;
     left: 0;
     padding-top: 1vw;
@@ -230,7 +229,7 @@ ul li {
 }
 
 .clearfix:before, .clearfix:after {
-    content: ' ';
+    content: '';
     display: table;
 }
 
@@ -285,8 +284,16 @@ ul li {
 .content .divider>p{
     margin: 0 0 1vw;
 }
-
 .border-box {
+    background-color: rgba(0, 0, 0, 0.07);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.5vw;
+    box-shadow: 0.1vw 0.1vw 1px rgba(0, 0, 0, 0.1);
+    padding: 1vw;
+    position: relative;
+}
+
+.border-box.address {
     background-color: rgba(0, 0, 0, 0.07);
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 0.5vw;
@@ -297,6 +304,13 @@ ul li {
 }
 
 .border-box.half {
+    background-color: rgba(0, 0, 0, 0.07);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.5vw;
+    box-shadow: 0.1vw 0.1vw 1px rgba(0, 0, 0, 0.1);
+    margin: 0.5vw 1vw;
+    padding: 1vw;
+    position: relative;
     float: left;
     width: calc(50% - 2vw);
 }
@@ -313,7 +327,7 @@ ul li {
     border: 1px solid #CCC;
     box-shadow: 0.4vw 0.4vw 4px rgba(0, 0, 0, 0.2);
     float: right;
-    margin-left: 1vw;
+    margin: 1vw 1vw 0vw 1vw;
     width: 50%;
 }
 

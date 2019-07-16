@@ -1,0 +1,59 @@
+@keyframes body-fade {
+  0% {
+    opacity: 1;
+  }
+  80% {
+      opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+}
+
+.loader {
+  font-size: 0;
+  background-color: white;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  animation: body-fade 0.3s 1 ease-out both 0.6s;
+}
+
+.spinner {
+  height: 5vw;
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.spinner > div {
+  background-color: #12381F;
+  width: 2vw;
+  height: 2vw;
+  margin: 0 0.3vw;
+  border-radius: 25%;
+  display: inline-block;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  animation-delay: -0.16s;
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0);
+  } 40% {
+    transform: scale(1.0);
+  }
+}

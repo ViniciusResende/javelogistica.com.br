@@ -89,17 +89,6 @@ input[name=solution] {
     bottom: 0.6em;
 }
 
-@media screen and (max-width: 968px) {
-    .solution h2 {
-        font-size: 9px;
-        line-height: 18px;
-    }
-
-    .solution-truck h2 {
-        line-height: 9px;
-    }
-}
-
 .solution-icon .im-truck,
 .solution-icon .im-shop {
             transform: translateY(-50%);
@@ -175,20 +164,16 @@ input[name=solution] {
 }
 
 .solution-slider .slides {
-    display: table;
+    display: flex;
     height: 100%;
-    width: 100%;
+    width: 300%;
     transform: translateX(0);
     transition: transform 0.3s ease;
 }
 
 .solution-slider .slide {
-    height: 100%;
-    left: 0;
     width: 100%;
     padding: 1em;
-    position: absolute;
-    top: 0;
 }
 
 .solution-slider h3 {
@@ -199,18 +184,10 @@ input[name=solution] {
     transform: translateX(0);
 }
 
-.solution-slider .slide.slide-transfer {
-    left: 100%;
-}
-
 #solutionTransfer:checked ~ .solution-slider .slides {
-    transform: translateX(-100%);
-}
-
-.solution-slider .slide.slide-cross {
-    left: 200%;
+    transform: translateX(calc(-100% / 3 * 1));
 }
 
 #solutionCross:checked ~ .solution-slider .slides {
-    transform: translateX(-200%);
+    transform: translateX(calc(-100% / 3 * 2));
 }

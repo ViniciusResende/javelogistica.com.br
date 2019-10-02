@@ -2,7 +2,7 @@
 
 body {
     background-color: #7C858C;
-    background-image: url('bg.jpg');
+    background-image: url('images/bg.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center center;
@@ -137,6 +137,7 @@ input[name=menu]#menuHome:checked ~ header label[for=menuHome] {
 
 input[name=menu]#menuSolucoes:checked ~ header label[for=menuSolucoes],
 input[name=menu]#menuEmpresa:checked ~ header label[for=menuEmpresa],
+input[name=menu]#menuCliente:checked ~ header label[for=menuCliente],
 input[name=menu]#menuAtendimento:checked ~ header label[for=menuAtendimento],
 input[name=menu]#menuContato:checked ~ header label[for=menuContato] {
     color: #00A650;
@@ -145,6 +146,7 @@ input[name=menu]#menuContato:checked ~ header label[for=menuContato] {
 #menuHome:checked ~ header label[for=menuHome]:before,
 #menuSolucoes:checked ~ header label[for=menuSolucoes]:before,
 #menuEmpresa:checked ~ header label[for=menuEmpresa]:before,
+#menuCliente:checked ~ header label[for=menuCliente]:before,
 #menuAtendimento:checked ~ header label[for=menuAtendimento]:before,
 #menuContato:checked ~ header label[for=menuContato]:before {
     transform: scale(1);
@@ -153,6 +155,7 @@ input[name=menu]#menuContato:checked ~ header label[for=menuContato] {
 #menuHome:checked ~ #home,
 #menuSolucoes:checked ~ #solucoes,
 #menuEmpresa:checked ~ #empresa,
+#menuCliente:checked ~ #cliente,
 #menuAtendimento:checked ~ #atendimento,
 #menuContato:checked ~ #contato {
     opacity: 1;
@@ -161,6 +164,7 @@ input[name=menu]#menuContato:checked ~ header label[for=menuContato] {
 
 #menuSolucoes:checked ~ #solucoes .content,
 #menuEmpresa:checked ~ #empresa .content,
+#menuCliente:checked ~ #cliente .content,
 #menuAtendimento:checked ~ #atendimento .content,
 #menuContato:checked ~ #contato .content {
     transform: translateY(0%);
@@ -284,6 +288,7 @@ ul li {
 .content .divider>p{
     margin: 0 0 1vw;
 }
+
 .border-box {
     background-color: rgba(0, 0, 0, 0.07);
     border: 1px solid rgba(0, 0, 0, 0.15);
@@ -329,6 +334,100 @@ ul li {
     float: right;
     margin: 1vw 1vw 0vw 1vw;
     width: 50%;
+}
+
+.client{
+    width: 60vw;
+    height: 330px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    overflow: hidden;
+}
+
+.client-slider{
+    width: 4985px;
+    height: 330px;
+    position: relative;
+    transition: left 1.5s;
+}
+
+.slider-image{
+    float: left;
+    margin: 0px;
+    padding: 0px 15px;
+}
+
+.client-changer{
+    position: relative;
+}
+
+.client-changer label{
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.4em;
+    font-weight: bold;
+    height: 80px;
+    line-height: 80px;
+    padding: 0 10px;
+    position: relative;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: color 0.6s ease;
+    z-index: 3;
+}
+
+#cliente1:checked ~ .client-slider{
+    left: 0px;
+}
+
+#cliente2:checked ~ .client-slider{
+    left: -330px;
+}
+
+#cliente3:checked ~ .client-slider{
+    left: -660px;
+}
+
+#cliente4:checked ~ .client-slider{
+    left: -990px;
+}
+
+#cliente5:checked ~ .client-slider{
+    left: -1320px;
+}
+
+#cliente6:checked ~ .client-slider{
+    left: -1650px;
+}
+
+#cliente7:checked ~ .client-slider{
+    left: -1980px;
+}
+
+#cliente8:checked ~ .client-slider{
+    left: -2310px;
+}
+
+#cliente9:checked ~ .client-slider{
+    left: -2640px;
+}
+
+#cliente10:checked ~ .client-slider{
+    left: -2970px;
+}
+
+#cliente11:checked ~ .client-slider{
+    left: -3300px;
+}
+
+#cliente12:checked ~ .client-slider{
+    left: -3630px;
+}
+
+#cliente13:checked ~ .client-slider{
+    left: -3860px;
 }
 
 .address iframe {

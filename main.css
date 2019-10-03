@@ -341,8 +341,9 @@ ul li {
     height: 330px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: auto;
+    margin-top: 5vw;
     overflow: hidden;
+    position: relative;
 }
 
 .client-slider{
@@ -358,76 +359,102 @@ ul li {
     padding: 0px 15px;
 }
 
-.client-changer{
-    position: relative;
+.client input{
+    display: none;
 }
 
-.client-changer label{
-    color: white;
+.client-changer{
+    background-color: rgba(0, 0, 0, 0.0);
+    bottom: 0.4vw;
+    display: flex;
+    height: 1vw;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.client-changer > label {
     cursor: pointer;
-    display: inline-block;
-    font-size: 1.4em;
-    font-weight: bold;
-    height: 80px;
-    line-height: 80px;
-    padding: 0 10px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    height: 100%;
     position: relative;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
-    transition: color 0.6s ease;
-    z-index: 3;
+}
+  
+  .client-changer > label:after {
+    background-color:  #00A650;
+    border: 1px solid black;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 0.7vw;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.7vw;
+    transition: all 0.3s ease;
+}
+
+.client-changer > label:hover:after {
+    background-color: #12381F;
+    transform: translate(-50%, -50%) scale(1.3);
+  }
+.client-changer > label:checked:after {
+    background-color: #12381F;
+    transform: translate(-50%, -50%) scale(1.1);
 }
 
 #cliente1:checked ~ .client-slider{
-    left: 0px;
+    left: -2%;
 }
 
 #cliente2:checked ~ .client-slider{
-    left: -330px;
+    left: -5%;
 }
 
 #cliente3:checked ~ .client-slider{
-    left: -660px;
+    left: -30%;
 }
 
 #cliente4:checked ~ .client-slider{
-    left: -990px;
+    left: -60%;
 }
 
 #cliente5:checked ~ .client-slider{
-    left: -1320px;
+    left: -90%;
 }
 
 #cliente6:checked ~ .client-slider{
-    left: -1650px;
+    left: -120%;
 }
 
 #cliente7:checked ~ .client-slider{
-    left: -1980px;
+    left: -150%;
 }
 
 #cliente8:checked ~ .client-slider{
-    left: -2310px;
+    left: -185%;
 }
 
 #cliente9:checked ~ .client-slider{
-    left: -2640px;
+    left: -215%;
 }
 
 #cliente10:checked ~ .client-slider{
-    left: -2970px;
+    left: -245%;
 }
 
 #cliente11:checked ~ .client-slider{
-    left: -3300px;
+    left: -275%;
 }
 
 #cliente12:checked ~ .client-slider{
-    left: -3630px;
+    left: -295%;
 }
 
 #cliente13:checked ~ .client-slider{
-    left: -3860px;
+    left: -320%;
 }
 
 .address iframe {
